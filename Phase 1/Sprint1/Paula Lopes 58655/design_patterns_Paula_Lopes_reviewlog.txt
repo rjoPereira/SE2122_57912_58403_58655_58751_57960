@@ -1,5 +1,11 @@
- Review
+Review's of Paula Ines Lopes - Element 2
  
-1) Factory  
-The identification seems correct, and the explanation is great.
-Reviewd by Clara Sousa
+Factory - Done by Clara Sousa [ Element 1 ]
+Explanation makes it easy to understand what a factory design pattern does! Well done.
+
+Command - Done by Pedro Reis [ Element 3 ]
+What a great explanation, it even proposes how to make it work to its full potential. 
+
+Adapter - Done by Ricardo Pereira [ Element 4 ]
+Could have a more indepth explanation of what an adapter design pattern is used for. Good.
+
