@@ -1,1 +1,11 @@
- 
+1. Factory Method Pattern - By Paula Inês Lopes
+
+The identification seems correct; the explanation is great, it is always good to explain the contents of the codebase.
+
+2. Singleton Pattern - By Ricardo Pereira
+
+I agree with the identification; great explanation, it really does match with the definition of a Singleton Design Pattern.
+
+3. State Pattern - By Rita Silva
+
+I fully agree with the identification, and of course it's always great to provide some theoretical knowldege in an explanation such as this; I do think, however, that it could be positive to be have an explanation more focused on the context of the code.
