@@ -1,0 +1,16 @@
+Collection Management System 
+
+From looking at your diagram, and from what I understand of JabRef, I believe that the associations between the sub-use cases "Using an ID" and "Using default Types", 
+regarding the sub-use case "Manually", should be generalizations instead of extensions, because adding an entry manually is always done either with an ID or a default 
+type, and the sub-use case "Manually" has no meaning on its own.
+
+Apart from that, all looks great. I agree with the secondary actor "Web", but still hold some reservations about the sub-use cases "Import Entries" and "Extract metadata 
+from a PDF", since I'm not 100% certain they require secondary actors.
+
+Finally, I think the name of your system should be something like "Collection Management System", in the place of "Collection-Related Tasks", since the diagram is not 
+about the tasks - it's about the way bibliographic references can be collected in JabRef.
+
+As to the identification of actors, I would only add their charateristics (human/non-human, active/passive). 
+
+Regarding the use case descriptions, they all look great! I'm not certain if you ought to add the new sub-use cases presented in the StarUML document, but it is my 
+opinion that it would be safer to do so.
