@@ -1,0 +1,5 @@
+Reviewing Use Case Diagram 3, done by Clara Sousa( element 1) , Pedro Reis ( element 3 ).
+
+I see you took into consideration the advice I gave you for using an generalization relationship. Well done!! :)
+
+Rewiew done by Paula Lopes - Element 2
