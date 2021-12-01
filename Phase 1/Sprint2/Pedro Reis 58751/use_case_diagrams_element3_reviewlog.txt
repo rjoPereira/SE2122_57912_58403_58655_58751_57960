@@ -1,0 +1,5 @@
+Libraries Management System
+
+I agree with the use case diagram, seems correct for the most part, except for a particular situation that I think it is missing, which is when you try to close an unsaved library and it asks you if you wish to save it. Might be a good idea to extend close to save library's state in current place when its status is unsaved. Other than that, everything is perfect for me.
+
+Regarding the use case description, I agree with everything, I would only update it regarding my suggestion for the diagram.
