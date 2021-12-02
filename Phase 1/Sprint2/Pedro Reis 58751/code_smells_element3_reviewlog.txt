@@ -1,0 +1,10 @@
+Code smells review by Pedro Reis
+
+1. Ricardo - Commented Code
+You could have explained why this is a commented code smell, saying something like this comment is acting as a reminder and this could mean the class is lacking some method/functionality to be done. To actually fix this you have to implement what the reminder says, you can't just delete the comments because the problem pointed out by this reminder will persist, so you actually have to fix it and once it is fixed, you can delete it.
+
+2. Rita - Shotgun Surgery
+The reason why this is a code smell is well explained but you could specify the problem in this particular class, writing something like the string "%s: '%s'" is repeated several times so if the string needed has to be changed, you would have to change it everywhere and it would be much better having this as static string variable. Other than the lack of specification, I think you did a good job.
+
+3. Clara - Shotgun Surgery
+I think the explation itself is perfect and you even identified the particular problem but you could have suggest something to fix this, like putting the string "importBibtex" in a static String variable other than that, good job.
