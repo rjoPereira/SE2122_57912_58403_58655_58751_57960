@@ -1,0 +1,11 @@
+1. Paula Lopes - Long Parameter List 
+
+I agree with the identification, explanation and refactoring proposal! The only thing I'd like to highlight is that the code snippet could be bigger.
+
+2. Pedro Reis - Message Chain
+
+I agree both with the identification of the code smell and the explanation; the refactoring proposal is just as good.
+
+3. Rita Silva - Data Class
+
+Even though the identification seems correct, I believe it would have been wiser to explain why you saw this class as such code smell. 

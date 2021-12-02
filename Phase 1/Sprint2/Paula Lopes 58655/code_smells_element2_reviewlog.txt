@@ -1,0 +1,14 @@
+Reviewer Paula Lopes 58655 - Element 2
+
+Done by Pedro Reis [element 3] - Code smell [Comments]
+I agree with the explanation, maybe you could have highlighted the refactoring proposal more, I feel like I understood it in between lines. Good.
+
+Done by Ricardo Pereira [element 4] - Code smell [Duplicate Code]
+I agree with the refactoring proposal. 
+However I think there should have been a more indepth explanation of what is considered duplicate code. Good.
+
+
+Done by Rita Silva [element 5] - Code smell [Message Chain]
+I agree that this is a message chain code smell. 
+However I think the refactoring proposal should consist on creating a class that let's say stores this objects and has methods that return them aswell,
+and the method removeUnwantedCharacters would call an instance of this class. Good.
