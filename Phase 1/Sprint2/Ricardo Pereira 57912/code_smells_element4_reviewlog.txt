@@ -1,0 +1,8 @@
+Duplicate code - Rita Silva
+I agree with her explanation and with her solution to solve this problem.
+
+Data Class - Clara Sousa
+Great explanation and as she said, the the easiest solution is just place the methods in another class.
+
+Empty Methods - Paula Lopes
+I agree with her explanation and good solution to fix this code smell.
