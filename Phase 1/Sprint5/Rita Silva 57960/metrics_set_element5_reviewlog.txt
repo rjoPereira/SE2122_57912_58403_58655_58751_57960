@@ -1,2 +1,2 @@
 MOOD metrics by Ricardo
-I agree with the conclusion Ricardo wrote, the paper is well structured and easy to understand.
+I agree with the conclusion, but there should be an explanation for the results present in the Excel file and the code smells found in the source code.
