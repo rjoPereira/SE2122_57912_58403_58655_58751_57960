@@ -1,0 +1,12 @@
+Reviewing Paula's Dependency Metrics
+
+I found your evaluation to be as thorough as necessary; explaining the Dependency parameters really helped to understand the graphs.
+It was also brilliant of you to calculate modes and average values and use them as a means to prove your point! 
+It really made everything easier.
+
+I hadn't realised how much should be improved only by looking at the dependency issues!
+
+It would have been great if you could have added some more code smells that would support your thesis, especially because we actually saw a couple
+of them when going through the code.
+
+Overall, your analysis seems very well elaborated. Congrats!
