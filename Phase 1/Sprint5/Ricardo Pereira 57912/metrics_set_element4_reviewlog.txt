@@ -1,0 +1,4 @@
+Lines of code by Pedro Reis
+
+Great explanation of what the LOC metrics and its parameters are, well detailed
+analysis and well made conclusion.
