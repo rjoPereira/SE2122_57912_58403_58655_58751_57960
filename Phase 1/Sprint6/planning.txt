@@ -1,0 +1,7 @@
+Sprint 6
+
+Use cases + functional requirements analysis: dia 13, a partir das 15h
+
+Implementações + Unit Tests: dia 14-15, a partir das 15h
+
+Este documento serve apenas para apresentarmos planeamento da sprint 6, elaborado na Sprint Planning. 
