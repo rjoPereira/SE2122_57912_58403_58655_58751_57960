@@ -1,0 +1,9 @@
+1. Composite - By Paula Inês Lopes
+
+The identification seems correct, it is well explained and the example makes it even better.
+
+2. Factory - By Pedro Reis
+Seems correct, and really well explained.
+
+3.Singleton - Rita Silva
+The identification seems correct, but it could have been shown the getInstance() method. 

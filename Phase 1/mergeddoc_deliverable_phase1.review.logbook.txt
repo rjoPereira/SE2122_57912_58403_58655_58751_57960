@@ -1,0 +1,278 @@
+Merged Deliverable Document of Review Logbook
+
+On top of the individual reviews that were logged in github, the S Team often reviewed documents and ideas during Daily Scrum and Sprint Retro meetings.
+There were also reviews made by the professor during our classes that we took into consideration for our final deliverable document of the project.
+The result of all these reviews can be seen in Mergeddoc_deliverable_phase1.
+
+In this document, we present the collection of logged reviews.
+
+  Sprint 1
+  Nothing was pushed and as a consequence there were no reviews.
+
+  Sprint 2
+  Nothing was pushed and as a consequence there were no reviews.
+
+  Sprint 3 
+    -----------------------------
+    Clara Sousa 58403
+
+    - Design Pattern Reviewlog:
+         1. Factory Method Pattern - By Paula Inês Lopes
+         The identification seems correct; the explanation is great, it is always good to explain the contents of the codebase.
+
+         2. Singleton Pattern - By Ricardo Pereira
+         I agree with the identification; great explanation, it really does match with the definition of a Singleton Design Pattern.
+
+         3. State Pattern - By Rita Silva
+         I fully agree with the identification, and of course it's always great to provide some theoretical knowldege in an explanation such as this; I do think, however, that it could be positive to be have an explanation more focused on the context of the code.
+    
+
+    -----------------------------
+    Paula Lopes 58655
+
+    - Design Pattern Reviewlog:
+      Review's of Paula Ines Lopes - Element 2
+      Factory - Done by Clara Sousa [ Element 1 ]
+      Explanation makes it easy to understand what a factory design pattern does! Well done.
+
+      Command - Done by Pedro Reis [ Element 3 ]
+      What a great explanation, it even proposes how to make it work to its full potential. 
+
+      Adapter - Done by Ricardo Pereira [ Element 4 ]
+      Could have a more indepth explanation of what an adapter design pattern is used for. Good.
+
+
+    -----------------------------
+    Pedro Reis 58751
+    
+    - Design Pattern Reviewlog:
+        Reviews designing patterns by Pedro Reis 58751
+        Ricardo
+        Factory - review by Pedro Reis
+        The explanation is simple and goes straight to the point about why this is a factory designing pattern, but I think you could have explained why this EntryTypeFactory is useful. 
+        I suggest adding something like this: EntryTypeFactory helps hiding the creation of objects from the client and this way the client code does not depend on concrete classes.
+
+        Rita
+        Decorator – review by Pedro Reis
+        The explanation is simple but I suggest adding more information, because in this decorator design pattern the BaseDecorator or the decorator abstract class is in reality the GraphicValidationDecoration class, which IconValidationDecorator class extends, and this IconValidationDecorator is only one of its concrete decorator classes that will each provide an increment of behavior. 
+        Sadly, we do not have access to GraphicValidationDecoration class because in our source version of JabRef it is located outside the src files. For the lack of additional information, the explanation can be acceptable since we dont know for sure the remaining classes of this designing pattern but this situation should have been identified in the explanation.
+
+        Clara
+        Composite – review by Pedro Reis
+        I think the explanation is great and I liked that you gave examples from the code snippet, which really helps to understand why this class, specifically, is a composite designing pattern. 
+        You could have explained the benefits of this designing pattern but other than that, good job.
+    
+    
+    -----------------------------
+    Ricardo Pereira 57912
+    
+    - Design Pattern Reviewlog:
+      1. Composite - By Paula Inês Lopes
+      The identification seems correct, it is well explained and the example makes it even better.
+
+      2. Factory - By Pedro Reis
+      Seems correct, and really well explained.
+
+      3.Singleton - Rita Silva
+      The identification seems correct, but it could have been shown the getInstance() method. 
+      
+      
+    -----------------------------
+    Rita Silva 57960
+    
+    - Design Pattern Reviewlog:
+      Reviewed Patterns:
+ 
+       Made by Clara
+       Proxy:
+       Concordo.
+ 
+       Made by Inês
+       Template:
+       Concordo.
+
+      Made by Pedro
+      Composite:
+      Concordo.
+      
+      
+    ------------------------------
+    
+  Sprint 4 
+    ------------------------------
+     Clara Sousa 58403
+     
+     - Code Smells Reviewlog:
+        1. Paula Lopes - Long Parameter List 
+        I agree with the identification, explanation and refactoring proposal! The only thing I'd like to highlight is that the code snippet could be bigger.
+
+        2. Pedro Reis - Message Chain
+        I agree both with the identification of the code smell and the explanation; the refactoring proposal is just as good.
+
+        3. Rita Silva - Data Class
+        Even though the identification seems correct, I believe it would have been wiser to explain why you saw this class as such code smell. 
+        
+        
+     - Use Case Diagram Reviewlog:
+      Collection Management System 
+      From looking at your diagram, and from what I understand of JabRef, I believe that the associations between the sub-use cases "Using an ID" and "Using default Types", 
+      regarding the sub-use case "Manually", should be generalizations instead of extensions, because adding an entry manually is always done either with an ID or a default 
+      type, and the sub-use case "Manually" has no meaning on its own.
+
+      Apart from that, all looks great. I agree with the secondary actor "Web", but still hold some reservations about the sub-use cases "Import Entries" and "Extract metadata 
+      from a PDF", since I'm not 100% certain they require secondary actors.
+
+      Finally, I think the name of your system should be something like "Collection Management System", in the place of "Collection-Related Tasks", since the diagram is not 
+      about the tasks - it's about the way bibliographic references can be collected in JabRef.
+
+      As to the identification of actors, I would only add their charateristics (human/non-human, active/passive). 
+
+      Regarding the use case descriptions, they all look great! I'm not certain if you ought to add the new sub-use cases presented in the StarUML document, but it is my 
+      opinion that it would be safer to do so.
+
+     
+    ------------------------------
+    Paula Lopes 58655
+    
+    - Code Smells Reviewlog:
+      Reviewer Paula Lopes 58655 - Element 2
+      Done by Pedro Reis [element 3] - Code smell [Comments]
+      I agree with the explanation, maybe you could have highlighted the refactoring proposal more, I feel like I understood it in between lines. Good.
+
+      Done by Ricardo Pereira [element 4] - Code smell [Duplicate Code]
+      I agree with the refactoring proposal. 
+      However I think there should have been a more indepth explanation of what is considered duplicate code. Good.
+
+      Done by Rita Silva [element 5] - Code smell [Message Chain]
+      I agree that this is a message chain code smell. 
+      However I think the refactoring proposal should consist on creating a class that let's say stores this objects and has methods that return them aswell,
+      and the method removeUnwantedCharacters would call an instance of this class. Good.
+      
+     - Use Case Diagram Reviewlog:
+      Reviewing Use Case Diagram 3, done by Clara Sousa( element 1) , Pedro Reis ( element 3 ).
+      I see you took into consideration the advice I gave you for using an generalization relationship. Well done!! :)
+      Rewiew done by Paula Lopes - Element 2
+  
+
+    ------------------------------
+     Pedro Reis 58751
+     
+     - Code Smells Reviewlog:
+        Code smells review by Pedro Reis
+        1. Ricardo - Commented Code
+        You could have explained why this is a commented code smell, saying something like this comment is acting as a reminder and this could mean the class is lacking some method/functionality to be done. 
+        To actually fix this you have to implement what the reminder says, you can't just delete the comments because the problem pointed out by this reminder will persist, so you actually have to fix it and once it is fixed, you can delete it.
+
+        2. Rita - Shotgun Surgery
+        The reason why this is a code smell is well explained but you could specify the problem in this particular class, writing something like the string "%s: '%s'" is repeated several times so if the string needed has to be changed, you would have to change it everywhere and it would be much better having this as static string variable. 
+        Other than the lack of specification, I think you did a good job.
+
+        3. Clara - Shotgun Surgery
+        I think the explation itself is perfect and you even identified the particular problem but you could have suggest something to fix this, like putting the string "importBibtex" in a static String variable other than that, good job.
+        
+     - Use Case Diagram Reviewlog:
+        Libraries Management System
+        I agree with the use case diagram, seems correct for the most part, except for a particular situation that I think it is missing, which is when you try to close an unsaved library and it asks you if you wish to save it. Might be a good idea to extend close to save library's state in current place when its status is unsaved. Other than that, everything is perfect for me.
+        Regarding the use case description, I agree with everything, I would only update it regarding my suggestion for the diagram.
+
+
+    ------------------------------
+    Ricardo Pereira 57912
+    
+      - Code Smells Reviewlog:
+        Duplicate code - Rita Silva
+        I agree with her explanation and with her solution to solve this problem.
+
+        Data Class - Clara Sousa
+        Great explanation and as she said, the the easiest solution is just place the methods in another class.
+
+        Empty Methods - Paula Lopes
+        I agree with her explanation and good solution to fix this code smell.
+        
+      - Use Case Diagram Reviewlog:
+        Use Case Diagram 5 review:
+        I agree with everything in that diagram, but the multiplicities with value 1 is unnecessary.
+
+      
+    ------------------------------
+    Rita Silva 57960
+    
+      - Code Smells Reviewlog:
+        Code smells review:
+        Clara:
+        I agree.
+
+        Inês:
+        I agree.
+
+        Pedro:
+        I agree.
+        
+      - Use Case Diagram Reviewlog:
+        Citation Related Tasks
+        I agree with the use case diagram and the use case description.
+        Inês and Ricardo.
+      
+
+    -------------------------------
+    
+  Sprint 5
+    -------------------------------
+    Clara Sousa 58403
+        
+    - Metrics Reviewlog:
+    Reviewing Paula's Dependency Metrics
+
+    I found your evaluation to be as thorough as necessary; explaining the Dependency parameters really helped to understand the graphs.
+    It was also brilliant of you to calculate modes and average values and use them as a means to prove your point! 
+    It really made everything easier.
+    I hadn't realised how much should be improved only by looking at the dependency issues!
+    It would have been great if you could have added some more code smells that would support your thesis, especially because we actually saw a couple
+    of them when going through the code.
+    Overall, your analysis seems very well elaborated. Congrats!
+    
+    
+    -------------------------------
+    Paula Lopes 58655
+    
+    - Metrics Reviewlog:
+    Reviewing Complexity Metrics - Done by Clara Sousa
+    Didn't expect to know this project complexity was acceptable( taking into consideration its' size).
+    The explanation is very detailed and easy to understand. Very good.
+    Reviewed by Paula Lopes [ Element 2]
+    
+    
+    --------------------------------
+    Pedro Reis 58751
+    
+    - Metrics Reviewlog:
+    Martin Packaging Metrics review by Pedro Reis 58751
+    The definitions of afferent couplings, efferent couplings, abstractness, distance from main sequence are very well explained but the analysis provided has some errors. 
+    For example, in the afferent couplings (Ca) the average is actually 312.89 and not 0 since you said the most classes are independent and that is false, most of them are dependent but they are still inside of the ideal range that goes from 0 to 500. 
+    In the efferent couplings most of the classes depend on outside classes and the average is actually 317.67, this value is really high and is outside the ideal range of 0 to 20. 
+    This indicates instability of a package, and any change of the numerous external classes can cause the need for changes in the package which means problems with care and development of code. 
+    In the abstractness there are some ortographic mistakes that are easily fixed, but it should be better explained. 
+    The abstractness is related to the instability, so if packages are stable with instability close to 0, abstractness should be close to 1, and the other way around for packages that are unstable, so for instability close to 1, abstractness should be close to 0. 
+    In the data collected by our metrics, our instability average is 0,5 which would mean our abstractness would be close to 0,5 but it is instead very close to 0 since it has an average of 0,06 meaning that our instability should be higher, close to 1 or the abstractness should be higher but this wouldn't be good because the abstractness should be close to 0 or 1. 
+    For the instability, our average is 0,5 and this is outside the ideal range of 0 to 0,3 or 0,7 to 1 because packages should be either very stable or unstable and we should avoid packages of intermediate stability like ours.
+    Regarding the distance from main sequence, our average is 0,32 which is decent but it could be lower in order to balance the difference between our abstractness and our instability. 
+    Like I already said, for our value of abstractness our instability should be higher because it is the parameter which is outside the ideal range. 
+    In conclusion, the easiest way to fix our packages would be to increase the instability by increasing even further our Ce (outgoing dependencies) value. 
+    This way our instability would be close to 1 and our abstractness would be close to 0 so the diff would be also close to 0. This means our packages would be easy to change.
+    
+    
+    ------------------------------------
+    Ricardo Pereira 57912
+    Lines of code by Pedro Reis
+    Great explanation of what the LOC metrics and its parameters are, well detailed
+    analysis and well made conclusion.
+    
+    
+    ------------------------------------
+    Rita Silva 57960
+    MOOD metrics by Ricardo
+    I agree with the conclusion, but there should be an explanation for the results present in the Excel file and the code smells found in the source code.
+    
+    ------------------------------------
+
+    
