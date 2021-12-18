@@ -1,1 +1,7 @@
+ Reviwing team B's user stories - Finding more bibliographic references from an author
+ Done by Pedro Reis [Element 3] , Ricardo Pereira [Element 4]
  
+ Well detailed explanation of the user story. Always a needed functionality, it's great you brought it up.
+ Good job Team B.
+
+Reviewed by Paula Lopes [Element 2]
