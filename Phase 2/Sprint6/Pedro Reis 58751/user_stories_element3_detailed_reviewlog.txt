@@ -1,0 +1,3 @@
+Review of team A user stories - Importing Bibliographic References from a CSV file
+
+This functionality makes a lot of sense to implement because the jabref application already had a functionality to export bibliographic references to a CSV file, so this new import functionality complements it. Regarding the explanation of user stories, it was really well done so good job.

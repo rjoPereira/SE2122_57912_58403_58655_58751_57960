@@ -1,0 +1,14 @@
+ Reviews designing patterns by Pedro Reis 58751
+
+Ricardo
+Factory - review by Pedro Reis
+The explanation is simple and goes straight to the point about why this is a factory designing pattern, but I think you could have explained why this EntryTypeFactory is useful. I suggest adding something like this: EntryTypeFactory helps hiding the creation of objects from the client and this way the client code does not depend on concrete classes.
+
+Rita
+Decorator – review by Pedro Reis
+The explanation is simple but I suggest adding more information, because in this decorator design pattern the BaseDecorator or the decorator abstract class is in reality the GraphicValidationDecoration class, which IconValidationDecorator class extends, and this IconValidationDecorator is only one of its concrete decorator classes that will each provide an increment of behavior. Sadly, we do not have access to GraphicValidationDecoration class because in our source version of JabRef it is located outside the src files. For the lack of additional information, the explanation can be acceptable since we dont know for sure the remaining classes of this designing pattern but this situation should have been identified in the explanation.
+
+Clara
+Composite – review by Pedro Reis
+I think the explanation is great and I liked that you gave examples from the code snippet, which really helps to understand why this class, specifically, is a composite designing pattern. You could have explained the benefits of this designing pattern but other than that, good job.
+
