@@ -1,0 +1,15 @@
+
+f	java:S116"QRename this field "BIBTEX" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½¸¦«
+h	java:S116"SRename this field "BIBLATEX" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( £‹ò
+œ
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(’ÔŠûÿÿÿÿ
+h
+java:S6204"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(½¸¦«
+h
+java:S6204"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'( £‹ò
+h
+java:S6204@"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ìƒ¸
+h
+java:S6204a"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹
+h
+java:S6204f"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹

@@ -1,0 +1,32 @@
+
+<
+java:S1170-"!Make this final field static too.(ÀÏ‘“ûÿÿÿÿ
+_
+java:S1134$"DTake the required action to fix the issue indicated by this comment.(Ë¸Ïÿÿÿÿÿ
+J
+java:S1874-"/Remove this use of "Globals"; it is deprecated.(ÀÏ‘“ûÿÿÿÿ
+m
+java:S6204?"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ÉÍÅñùÿÿÿÿ
+V	java:S125I"<This block of commented-out lines of code should be removed.(Ñç§öùÿÿÿÿ
+M
+java:S1135H"2Complete the task associated to this TODO comment.(©îØžþÿÿÿÿ
+M
+java:S1135N"2Complete the task associated to this TODO comment.(ÞüÍ‘ùÿÿÿÿ
+m
+java:S3776p"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(øïÆúÿÿÿÿ
+E
+java:S1874y"/Remove this use of "Globals"; it is deprecated.(£§¯è
+E
+java:S1874y"/Remove this use of "Globals"; it is deprecated.(£§¯è
+J
+java:S1874~"/Remove this use of "Globals"; it is deprecated.(ÖéÒÎúÿÿÿÿ
+J
+java:S1874~"/Remove this use of "Globals"; it is deprecated.(ÖéÒÎúÿÿÿÿ
+F
+java:S1874‚"/Remove this use of "Globals"; it is deprecated.(£§¯è
+F
+java:S1874‚"/Remove this use of "Globals"; it is deprecated.(£§¯è
+I
+java:S1135•"2Complete the task associated to this TODO comment.(Õ¦ÞÂ
+N
+java:S1135ª"2Complete the task associated to this TODO comment.(»Ýˆ›ýÿÿÿÿ

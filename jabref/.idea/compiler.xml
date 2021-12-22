@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Gradle Imported" enabled="true">
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-core/3.0.0-SNAPSHOT/214d1db123a3948921e0c55993f4c3c8e8c687f8/log4j-core-3.0.0-SNAPSHOT.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-plugins/3.0.0-SNAPSHOT/c28cd2efd3a56f44b49df235a627a543736f5c5a/log4j-plugins-3.0.0-SNAPSHOT.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-api/3.0.0-SNAPSHOT/56adbe4de17b2e98a7d26a37704ba45f64777c43/log4j-api-3.0.0-SNAPSHOT.jar" />
+        </processorPath>
+        <module name="JabRef.main" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="16" />
+  </component>
+</project>

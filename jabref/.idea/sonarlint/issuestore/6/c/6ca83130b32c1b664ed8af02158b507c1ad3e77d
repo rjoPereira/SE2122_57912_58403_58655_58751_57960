@@ -1,0 +1,108 @@
+
+|
+java:S1149¦"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(¨Äü©
+
+java:S1149§"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(¿Şƒâıÿÿÿÿ
+|
+java:S1149Ê"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(çèòî
+{
+java:S1149×"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(çõ¶F
+M	java:S106l"9Replace this use of System.out or System.err by a logger.(ĞÔ†8
+N	java:S106{"9Replace this use of System.out or System.err by a logger.(á×Š
+O	java:S106š"9Replace this use of System.out or System.err by a logger.(Ä±à™
+K
+java:S1874›"/Remove this use of "Globals"; it is deprecated.(ĞĞ‘½ûÿÿÿÿ
+T	java:S106Ÿ"9Replace this use of System.out or System.err by a logger.(·±º»ùÿÿÿÿ
+K
+java:S1874¡"/Remove this use of "Globals"; it is deprecated.(„ñïøÿÿÿÿ
+T	java:S106£"9Replace this use of System.out or System.err by a logger.(¢æúîşÿÿÿÿ
+T	java:S106§"9Replace this use of System.out or System.err by a logger.(Ò¿½Ÿùÿÿÿÿ
+i
+java:S3776µ"RRefactor this method to reduce its Cognitive Complexity from 39 to the 15 allowed.(Ñİ³œ
+T	java:S106Ü"9Replace this use of System.out or System.err by a logger.(øÀÖıÿÿÿÿ
+T	java:S106é"9Replace this use of System.out or System.err by a logger.(ëÏüÿÿÿÿ
+K
+java:S1874ô"/Remove this use of "Globals"; it is deprecated.(À²•‹ûÿÿÿÿ
+T	java:S106€"9Replace this use of System.out or System.err by a logger.(¢ŞÈÓùÿÿÿÿ
+T	java:S106¹"9Replace this use of System.out or System.err by a logger.(Ê€¶•şÿÿÿÿ
+T	java:S106»"9Replace this use of System.out or System.err by a logger.(ÿÁÄ¿ùÿÿÿÿ
+T	java:S106À"9Replace this use of System.out or System.err by a logger.(¯¬ëİşÿÿÿÿ
+O	java:S106Â"9Replace this use of System.out or System.err by a logger.(º‚½ğ
+T	java:S106Î"9Replace this use of System.out or System.err by a logger.(ùÄ¤êûÿÿÿÿ
+h
+java:S3776×"RRefactor this method to reduce its Cognitive Complexity from 28 to the 15 allowed.(çõ¶F
+O	java:S106á"9Replace this use of System.out or System.err by a logger.(ˆ’Ÿñ
+O	java:S106ã"9Replace this use of System.out or System.err by a logger.(¿Ûø“
+O	java:S106è"9Replace this use of System.out or System.err by a logger.(æû­
+O	java:S106ê"9Replace this use of System.out or System.err by a logger.(¿Ûø“
+T	java:S106"9Replace this use of System.out or System.err by a logger.(í–èèûÿÿÿÿ
+F
+java:S1874—"/Remove this use of "Globals"; it is deprecated.(®¼œ±
+T	java:S106™"9Replace this use of System.out or System.err by a logger.(ŠûÉêùÿÿÿÿ
+O	java:S106"9Replace this use of System.out or System.err by a logger.(¤ù ş
+T	java:S106¢"9Replace this use of System.out or System.err by a logger.(„ªÉüÿÿÿÿ
+T	java:S106§"9Replace this use of System.out or System.err by a logger.(Èáçÿÿÿÿÿ
+T	java:S106¶"9Replace this use of System.out or System.err by a logger.(õÈÈÿÿÿÿÿ
+O	java:S106·"9Replace this use of System.out or System.err by a logger.(ˆ‹¦“
+T	java:S106¸"9Replace this use of System.out or System.err by a logger.(›©Ğçÿÿÿÿÿ
+i
+java:S3776¼"RRefactor this method to reduce its Cognitive Complexity from 28 to the 15 allowed.(‡Ì®İ
+K
+java:S1874Í"/Remove this use of "Globals"; it is deprecated.(“Á¸¹ûÿÿÿÿ
+T	java:S106‰"9Replace this use of System.out or System.err by a logger.(èç´öùÿÿÿÿ
+T	java:S106“"9Replace this use of System.out or System.err by a logger.(şëŸÛùÿÿÿÿ
+K
+java:S1874˜"/Remove this use of "Globals"; it is deprecated.(§üù×ûÿÿÿÿ
+T	java:S106"9Replace this use of System.out or System.err by a logger.(ó×µÙÿÿÿÿÿ
+N	java:S106¤"9Replace this use of System.out or System.err by a logger.(Ã—á<
+T	java:S106²"9Replace this use of System.out or System.err by a logger.(¢ŞÈÓùÿÿÿÿ
+F
+java:S1874¿"/Remove this use of "Globals"; it is deprecated.(¡ûÇ¾
+T	java:S106Á"9Replace this use of System.out or System.err by a logger.(‹¨ë½şÿÿÿÿ
+K
+java:S1874Â"/Remove this use of "Globals"; it is deprecated.(¡ğĞİúÿÿÿÿ
+O	java:S106Ä"9Replace this use of System.out or System.err by a logger.(à«âÄ
+O	java:S106Í"9Replace this use of System.out or System.err by a logger.(™öÓá
+K
+java:S1874×"/Remove this use of "Globals"; it is deprecated.(Â‚í¹üÿÿÿÿ
+F
+java:S1874Ù"/Remove this use of "Globals"; it is deprecated.(Ü×§¹
+F
+java:S1874Û"/Remove this use of "Globals"; it is deprecated.(ƒÎÔ
+M
+java:S2696ß"6Make the enclosing method "static" or remove this set.(ÍæÇ†
+F
+java:S1874ß"/Remove this use of "Globals"; it is deprecated.(ÍæÇ†
+F
+java:S1874ß"/Remove this use of "Globals"; it is deprecated.(ÍæÇ†
+O	java:S106è"9Replace this use of System.out or System.err by a logger.(‘ìÃ»
+T	java:S106ì"9Replace this use of System.out or System.err by a logger.(©ÖıÜüÿÿÿÿ
+O	java:S106ô"9Replace this use of System.out or System.err by a logger.(ˆ±µ¿
+T	java:S106ö"9Replace this use of System.out or System.err by a logger.(©şêÜúÿÿÿÿ
+O	java:S106 "9Replace this use of System.out or System.err by a logger.(¬¥Ç¨
+T	java:S106¡"9Replace this use of System.out or System.err by a logger.(Õ êòùÿÿÿÿ
+O	java:S106®"9Replace this use of System.out or System.err by a logger.(ËŸÓ
+T	java:S106°"9Replace this use of System.out or System.err by a logger.(Õ êòùÿÿÿÿ
+O	java:S106±"9Replace this use of System.out or System.err by a logger.(ÃÆšÏ
+T	java:S106µ"9Replace this use of System.out or System.err by a logger.(¼ó°ûÿÿÿÿ
+N	java:S106¶"9Replace this use of System.out or System.err by a logger.(£½Õ_
+O	java:S106º"9Replace this use of System.out or System.err by a logger.(ğöÂ‡
+T	java:S106½"9Replace this use of System.out or System.err by a logger.(â£‚ˆûÿÿÿÿ
+E
+java:S1121Š".Extract the assignment out of this expression.(£â•
+J
+java:S1121".Extract the assignment out of this expression.(­–¬ıüÿÿÿÿ
+K
+java:S1066í"/Merge this if statement with the enclosing one.(Å¾Åüÿÿÿÿ
+X	java:S107“"=Method has 10 parameters, which is greater than 7 authorized.(˜–Ü¢ûÿÿÿÿ
+W	java:S107µ"<Method has 9 parameters, which is greater than 7 authorized.(Àğåùúÿÿÿÿ
+R	java:S107Ê"<Method has 9 parameters, which is greater than 7 authorized.(çèòî
+Q	java:S107×"<Method has 9 parameters, which is greater than 7 authorized.(çõ¶F
+:
+java:S2629ó"$Invoke method(s) only conditionally.(óï»Y
+;
+java:S2629ÿ"$Invoke method(s) only conditionally.(£¤Ó”
+@
+java:S2629"$Invoke method(s) only conditionally.(ŞáĞÂüÿÿÿÿ
+l
+java:S3655¼"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(¨Áûıÿÿÿÿ
