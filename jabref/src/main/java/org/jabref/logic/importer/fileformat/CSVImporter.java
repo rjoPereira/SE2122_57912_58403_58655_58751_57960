@@ -16,7 +16,7 @@ import java.nio.charset.Charset;
 import java.nio.file.Path;
 import java.util.*;
 
-public class CSVImporter extends Importer {
+public class CSVImporter extends Importer{
     @Override
     public String getName() {
         return "CSV";
@@ -74,6 +74,11 @@ public class CSVImporter extends Importer {
             csvEntries.add(entry);
         }
 
+        Collections.sort(csvEntries, new Comparator<BibEntry>() {
+            public int compare(BibEntry b1, BibEntry b2) {
+                return b1.getField(StandardField.AUTHOR).get().compareTo(b2.getField(StandardField.AUTHOR).get());
+            }
+        });
 
         return csvEntries;
     }

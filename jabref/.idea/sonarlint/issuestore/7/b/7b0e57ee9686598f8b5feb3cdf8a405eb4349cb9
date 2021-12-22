@@ -1,0 +1,33 @@
+
+^
+java:S6355#"HAdd 'since' and/or 'forRemoval' arguments to the @Deprecated annotation.(õˆúš
+P
+java:S1133%"5Do not forget to remove this deprecated code someday.(ì‰É×øÿÿÿÿ
+s
+java:S11042"XMake stateManager a static final constant or non-public and provide accessors if needed.(ûôÉîùÿÿÿÿ
+l
+java:S1104:"QMake prefs a static final constant or non-public and provide accessors if needed.(÷Ø¬•øÿÿÿÿ
+
+java:S1104A"iMake journalAbbreviationRepository a static final constant or non-public and provide accessors if needed.(ÔÈº¼
+{
+java:S1104H"`Make protectedTermsLoader a static final constant or non-public and provide accessors if needed.(÷ƒÍğøÿÿÿÿ
+o
+java:S1104J"YMake exportFactory a static final constant or non-public and provide accessors if needed.(ÒÜ€è
+m
+java:S1104K"WMake undoManager a static final constant or non-public and provide accessors if needed.(ğŞÉ
+s
+java:S1104L"]Make entryTypesManager a static final constant or non-public and provide accessors if needed.(Íô×ˆ
+M
+java:S14442"2Make this "public static stateManager" field final(ûôÉîùÿÿÿÿ
+F
+java:S1444:"+Make this "public static prefs" field final(÷Ø¬•øÿÿÿÿ
+Y
+java:S1444A"CMake this "public static journalAbbreviationRepository" field final(ÔÈº¼
+U
+java:S1444H":Make this "public static protectedTermsLoader" field final(÷ƒÍğøÿÿÿÿ
+I
+java:S1444J"3Make this "public static exportFactory" field final(ÒÜ€è
+G
+java:S1444K"1Make this "public static undoManager" field final(ğŞÉ
+M
+java:S1444L"7Make this "public static entryTypesManager" field final(Íô×ˆ

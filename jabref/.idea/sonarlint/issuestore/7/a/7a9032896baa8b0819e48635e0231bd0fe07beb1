@@ -1,0 +1,12 @@
+
+r	java:S116"]Rename this field "HTML_FALLBACK_TYPE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ïí‚¯
+7
+java:S1170"!Make this final field static too.(ïí‚¯
+F
+java:S1874¹"/Remove this use of "Globals"; it is deprecated.(›®¨À
+n
+java:S3776Ê"RRefactor this method to reduce its Cognitive Complexity from 26 to the 15 allowed.(ŞÂß¬ÿÿÿÿÿ
+K
+java:S1874Î"/Remove this use of "Globals"; it is deprecated.(˜Ô£Ôÿÿÿÿÿ
+;
+java:S1700" Rename field "externalFileTypes"(›÷³şÿÿÿÿ

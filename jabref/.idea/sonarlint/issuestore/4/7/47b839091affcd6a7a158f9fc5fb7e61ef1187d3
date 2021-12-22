@@ -1,0 +1,23 @@
+
+X
+java:S3457ì"AFormat specifiers should be used instead of string concatenation.(ò…çÑ
+R	java:S125—"<This block of commented-out lines of code should be removed.(øá
+I
+java:S1135–"2Complete the task associated to this TODO comment.(íŞ§´
+F
+java:S1874œ"/Remove this use of "Globals"; it is deprecated.(ò›’û
+R	java:S125 "<This block of commented-out lines of code should be removed.(—§…Ÿ
+I
+java:S1135Ÿ"2Complete the task associated to this TODO comment.(íŞ§´
+I
+java:S1135¦"2Complete the task associated to this TODO comment.(…‘°
+X
+java:S3457"AFormat specifiers should be used instead of string concatenation.(à»ï
+p
+java:S1192w"ZDefine a constant instead of duplicating this literal "Could not find file '%0'." 4 times.(ˆ¾Ş
+k
+java:S1192Ğ"ODefine a constant instead of duplicating this literal "File not found" 4 times.(ıõáÀÿÿÿÿÿ
+z
+java:S1488ñ"dImmediately return this expression instead of assigning it to the temporary variable "downloadTask".(íÁ¿9
+N
+java:S2629"7Use the built-in formatting to construct this argument.(à»ï

@@ -1,0 +1,13 @@
+
+F
+java:S2160%"+Override the "equals" method in this class.(ğ­üûÿÿÿÿ
+m
+java:S3776R"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(¬ü±ˆùÿÿÿÿ
+‡
+java:S6201g"lReplace this instanceof check and cast with 'instanceof PDAnnotationFileAttachment annotationFileAttachment'(Ş—±×úÿÿÿÿ
+Q
+java:S1068'";Remove this unused "importFormatPreferences" private field.(Á¶‹Ü
+n
+java:S2259x"S"NullPointerException" will be thrown when invoking method "extractAndParseFile()".(ñ¼ê¶ùÿÿÿÿ
+n
+java:S2259j"S"NullPointerException" will be thrown when invoking method "extractAndParseFile()".(ñ¼ê¶ùÿÿÿÿ

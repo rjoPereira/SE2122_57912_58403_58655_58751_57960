@@ -1,0 +1,39 @@
+
+N
+java:S1874;"3Remove this use of "getInstance"; it is deprecated.(ÿéûÅúÿÿÿÿ
+Q
+java:S2696<"6Make the enclosing method "static" or remove this set.(òÙÀÖøÿÿÿÿ
+J
+java:S1874<"/Remove this use of "Globals"; it is deprecated.(òÙÀÖøÿÿÿÿ
+J
+java:S1874B"/Remove this use of "Globals"; it is deprecated.(‘Ë·€üÿÿÿÿ
+E
+java:S1874a"/Remove this use of "Globals"; it is deprecated.(£×£ß
+E
+java:S1874b"/Remove this use of "Globals"; it is deprecated.(èÅÌÛ
+J
+java:S1874u"/Remove this use of "Globals"; it is deprecated.(ú¯á†øÿÿÿÿ
+D
+java:S1874}"/Remove this use of "Globals"; it is deprecated.(¤ÚÍ
+K
+java:S1874€"/Remove this use of "Globals"; it is deprecated.(ïµ§ğüÿÿÿÿ
+E
+java:S1874‚"/Remove this use of "Globals"; it is deprecated.(ÃÉŒn
+K
+java:S1874ƒ"/Remove this use of "Globals"; it is deprecated.(ïçş¢üÿÿÿÿ
+F
+java:S1874…"/Remove this use of "Globals"; it is deprecated.(´ÈÎ‰
+F
+java:S1874†"/Remove this use of "Globals"; it is deprecated.(€ù¦
+F
+java:S1874‡"/Remove this use of "Globals"; it is deprecated.(Ó®Ì™
+K
+java:S1874‹"/Remove this use of "Globals"; it is deprecated.(¾ÁÖ†úÿÿÿÿ
+K
+java:S1874"/Remove this use of "Globals"; it is deprecated.(‹µ ıúÿÿÿÿ
+P
+java:S1141H"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ
+?
+java:S2629n"$Invoke method(s) only conditionally.(¼Šı¥øÿÿÿÿ
+[
+java:S2095 "DUse try-with-resources or close this "Stream" in a "finally" clause.(÷š…Ÿ

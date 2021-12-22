@@ -1,0 +1,17 @@
+
+K
+java:S1874„"/Remove this use of "Globals"; it is deprecated.(º‡¡¯ıÿÿÿÿ
+v
+java:S11043"[Make entriesListView a static final constant or non-public and provide accessors if needed.(™§‘¼ùÿÿÿÿ
+s
+java:S11044"XMake importButton a static final constant or non-public and provide accessors if needed.(ï€Ò§şÿÿÿÿ
+q
+java:S11045"VMake totalItems a static final constant or non-public and provide accessors if needed.(×äÆúûÿÿÿÿ
+t
+java:S11046"YMake selectedItems a static final constant or non-public and provide accessors if needed.(‘æíòÿÿÿÿÿ
+{
+java:S11047"eMake downloadLinkedOnlineFiles a static final constant or non-public and provide accessors if needed.(ÚûßÑ
+E
+java:S5411n"*Use the primitive boolean expression here.(ì°Ñşÿÿÿÿ
+E
+java:S5411~"*Use the primitive boolean expression here.(¿¢À€ıÿÿÿÿ
