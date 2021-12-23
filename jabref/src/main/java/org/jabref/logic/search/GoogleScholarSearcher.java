@@ -1,5 +1,6 @@
 package org.jabref.logic.search;
 
+import org.jabref.gui.actions.SimpleCommand;
 import org.jabref.model.entry.BibEntry;
 import org.jabref.model.entry.field.StandardField;
 import org.jabref.model.entry.types.StandardEntryType;
@@ -13,7 +14,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class GoogleScholarSearcher {
+public class GoogleScholarSearcher extends SimpleCommand {
     String url;
     Document doc;
     String authorName;
@@ -102,5 +103,10 @@ public class GoogleScholarSearcher {
         }
 
         return entries;
+    }
+
+    @Override
+    public void execute() {
+
     }
 }

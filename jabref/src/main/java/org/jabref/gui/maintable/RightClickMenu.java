@@ -2,6 +2,7 @@ package org.jabref.gui.maintable;
 
 import javax.swing.undo.UndoManager;
 
+import de.saxsys.mvvmfx.utils.commands.Command;
 import javafx.scene.control.ContextMenu;
 import javafx.scene.control.Menu;
 import javafx.scene.control.SeparatorMenuItem;
@@ -27,9 +28,13 @@ import org.jabref.gui.specialfields.SpecialFieldMenuItemFactory;
 import org.jabref.logic.citationstyle.CitationStyleOutputFormat;
 import org.jabref.logic.citationstyle.CitationStylePreviewLayout;
 import org.jabref.logic.preview.PreviewLayout;
+import org.jabref.logic.search.GoogleScholarSearcher;
 import org.jabref.model.entry.field.SpecialField;
+import org.jabref.model.entry.field.StandardField;
 import org.jabref.preferences.PreferencesService;
 import org.jabref.preferences.PreviewPreferences;
+
+import java.io.IOException;
 
 public class RightClickMenu {
 
@@ -40,7 +45,7 @@ public class RightClickMenu {
                                      StateManager stateManager,
                                      PreferencesService preferencesService,
                                      UndoManager undoManager,
-                                     ClipBoardManager clipBoardManager) {
+                                     ClipBoardManager clipBoardManager) throws IOException {
         ContextMenu contextMenu = new ContextMenu();
         ActionFactory factory = new ActionFactory(keyBindingRepository);
 
@@ -73,6 +78,8 @@ public class RightClickMenu {
         contextMenu.getItems().add(factory.createMenuItem(StandardActions.OPEN_EXTERNAL_FILE, new OpenExternalFileAction(dialogService, stateManager, preferencesService)));
         contextMenu.getItems().add(factory.createMenuItem(StandardActions.OPEN_URL, new OpenUrlAction(dialogService, stateManager, preferencesService)));
         contextMenu.getItems().add(factory.createMenuItem(StandardActions.SEARCH_SHORTSCIENCE, new SearchShortScienceAction(dialogService, stateManager, preferencesService)));
+        //
+        contextMenu.getItems().add(factory.createMenuItem(StandardActions.SEARCH_GOOGLESCHOLAR, new GoogleScholarSearcher(entry.getEntry().getField(StandardField.AUTHOR).get())));
 
         contextMenu.getItems().add(new SeparatorMenuItem());
 
