@@ -112,14 +112,21 @@ public class MainTable extends TableView<BibEntryTableViewModel> {
                         libraryTab.showAndEdit(entry.getEntry());
                     }
                 })
-                .withContextMenu(entry -> RightClickMenu.create(entry,
-                        keyBindingRepository,
-                        libraryTab,
-                        dialogService,
-                        stateManager,
-                        preferencesService,
-                        undoManager,
-                        Globals.getClipboardManager()))
+                .withContextMenu(entry -> {
+                    try {
+                        return RightClickMenu.create(entry,
+                                keyBindingRepository,
+                                libraryTab,
+                                dialogService,
+                                stateManager,
+                                preferencesService,
+                                undoManager,
+                                Globals.getClipboardManager());
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    return null;
+                })
                 .setOnDragDetected(this::handleOnDragDetected)
                 .setOnDragDropped(this::handleOnDragDropped)
                 .setOnDragOver(this::handleOnDragOver)

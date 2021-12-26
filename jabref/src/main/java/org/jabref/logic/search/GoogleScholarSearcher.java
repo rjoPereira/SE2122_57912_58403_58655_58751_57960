@@ -15,6 +15,8 @@ import java.util.Iterator;
 import java.util.List;
 
 public class GoogleScholarSearcher extends SimpleCommand {
+    private static final String GOOGLE_SCHOLAR_ADDR = "https://scholar.google.com/";
+
     String url;
     Document doc;
     String authorName;
@@ -23,21 +25,24 @@ public class GoogleScholarSearcher extends SimpleCommand {
         this.authorName = authorName;
         url = getUrl();
         doc = Jsoup.connect(url).get();
+        System.out.println(doc.body());
+
     }
 
     private String getUrl() throws IOException {
         String[] name = authorName.split(" ");
         Document doc;
-        String searchURL = "https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q="+name[0]+"+"+name[1]+"&btnG=";
+        String searchURL = GOOGLE_SCHOLAR_ADDR + "scholar?hl=en&as_sdt=0%2C5&q="+name[0]+"+"+name[1]+"&btnG=";
         doc = Jsoup.connect(searchURL).get();
 
         Elements authorsName = doc.getElementsByClass("gs_rt2");
 
         for (int i = 0; i < authorsName.size(); i++){
             if(authorsName.get(i).text().equalsIgnoreCase(authorName)){
-                return authorsName.get(i).getElementsByTag("a").get(0).attr("href");
+                return GOOGLE_SCHOLAR_ADDR + authorsName.get(i).getElementsByTag("a").get(0).attr("href");
             }
         }
+
         return null;
     }
 
