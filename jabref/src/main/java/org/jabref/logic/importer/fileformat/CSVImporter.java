@@ -85,13 +85,13 @@ public class CSVImporter extends Importer{
 
     @Override
     public ParserResult importDatabase(Path filePath, Charset defaultEncoding) {
-        //Objects.requireNonNull(filePath);
+        Objects.requireNonNull(filePath);
         return new ParserResult(readCSV(filePath));
     }
 
     @Override
     public boolean isRecognizedFormat(BufferedReader reader) throws IOException {
-        //Objects.requireNonNull(reader);
+        Objects.requireNonNull(reader);
         return true;
     }
 
