@@ -1,16 +1,13 @@
 package org.jabref.logic.search;
-
 import javafx.beans.binding.BooleanExpression;
 import org.jabref.gui.DialogService;
 import org.jabref.gui.JabRefFrame;
 import org.jabref.gui.StateManager;
 import org.jabref.gui.actions.SimpleCommand;
-import org.jabref.gui.importer.NewEntryAction;
-import org.jabref.gui.preferences.file.FileTabViewModel;
+import org.jabref.logic.l10n.Localization;
 import org.jabref.model.entry.BibEntry;
 import org.jabref.model.entry.field.StandardField;
 import org.jabref.model.entry.types.StandardEntryType;
-import org.jabref.preferences.PreferencesService;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -25,27 +22,22 @@ import java.util.Optional;
 import static org.jabref.gui.actions.ActionHelper.isFieldSetForSelectedEntry;
 import static org.jabref.gui.actions.ActionHelper.needsEntriesSelected;
 
+
 public class GoogleScholarSearcher extends SimpleCommand {
     private static final String GOOGLE_SCHOLAR_ADDR = "https://scholar.google.com/";
-    private static final String USER_AGENT = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36";
+    private static final String USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36";
     private static final String REFERRER = "https://www.google.com/";
 
     String url;
     Document doc;
     String authorName;
-    private final StateManager stateManager;
-    private final PreferencesService preferences;
     private final JabRefFrame jabRefFrame;
+    private final DialogService dialogService;
 
-    public GoogleScholarSearcher(BibEntry entry, JabRefFrame jabRefFrame, PreferencesService preferences, StateManager stateManager) throws IOException {
-        this.stateManager = stateManager;
+    public GoogleScholarSearcher(BibEntry entry, DialogService dialogService, JabRefFrame jabRefFrame, StateManager stateManager) throws IOException {
         this.jabRefFrame = jabRefFrame;
-        this.preferences = preferences;
-
+        this.dialogService = dialogService;
         BooleanExpression fieldIsSet = isFieldSetForSelectedEntry(StandardField.AUTHOR, stateManager);
-        //preferences.shouldAutosave();
-        // FileTabViewModel tab = new FileTabViewModel(preferences);
-        //tab.autosaveLocalLibrariesProperty();
         Optional<String> author = entry.getField(StandardField.AUTHOR);
         if(author.isPresent()) this.authorName = author.get();
         this.executable.bind(needsEntriesSelected(1, stateManager).and(fieldIsSet));
@@ -84,7 +76,7 @@ public class GoogleScholarSearcher extends SimpleCommand {
         Elements titlesElems = doc.getElementsByClass("gsc_a_at");
         Iterator<Element> it = titlesElems.iterator();
 
-        while(it.hasNext() && titles.size() <= 10){
+        while(it.hasNext() && titles.size() < 10){
             Element titleElem = it.next();
             titles.add(titleElem.text());
         }
@@ -95,10 +87,10 @@ public class GoogleScholarSearcher extends SimpleCommand {
     private List<String> getYears(){
         List<String> years = new ArrayList<>(10);
 
-        Elements yearsClasses = doc.select(".gsc_a_y .gsc_a_h");
+        Elements yearsClasses = doc.select(".gsc_a_y .gsc_a_h.gsc_a_hc.gs_ibl");
         Iterator<Element> it = yearsClasses.iterator();
 
-        while(it.hasNext() && years.size() <= 10){
+        while(it.hasNext() && years.size() < 10){
             Element year = it.next();
             years.add(year.text());
         }
@@ -113,7 +105,7 @@ public class GoogleScholarSearcher extends SimpleCommand {
         int firstJournal = 1;
         Iterator<Element> it = journalsClasses.iterator();
 
-        while(it.hasNext() && journals.size() <= 10){
+        while(it.hasNext() && journals.size() < 10){
             String journal = journalsClasses.get(firstJournal).text().split(", ")[0];
             journals.add(journal);
             firstJournal += 2;
@@ -145,10 +137,14 @@ public class GoogleScholarSearcher extends SimpleCommand {
     public void execute() {
         try {
             url = getUrl();
+            System.out.println(url);
             doc = Jsoup.connect(url).userAgent(USER_AGENT).referrer(REFERRER).get();
             jabRefFrame.getCurrentLibraryTab().insertEntries(getEntries());
         } catch (IOException e) {
             e.printStackTrace();
+        } catch(IllegalArgumentException e) {
+            dialogService.showWarningDialogAndWait(Localization.lang("Warning"),
+                    Localization.lang(e.getMessage()+". Author not found."));
         }
     }
 }
