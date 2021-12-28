@@ -1,4 +1,5 @@
 package org.jabref.logic.search;
+
 import javafx.beans.binding.BooleanExpression;
 import org.jabref.gui.DialogService;
 import org.jabref.gui.JabRefFrame;
@@ -22,29 +23,30 @@ import java.util.Optional;
 import static org.jabref.gui.actions.ActionHelper.isFieldSetForSelectedEntry;
 import static org.jabref.gui.actions.ActionHelper.needsEntriesSelected;
 
-
 public class GoogleScholarSearcher extends SimpleCommand {
     private static final String GOOGLE_SCHOLAR_ADDR = "https://scholar.google.com/";
     private static final String USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36";
     private static final String REFERRER = "https://www.google.com/";
 
-    String url;
-    Document doc;
-    String authorName;
+    private String url;
+    private Document doc;
+    private int currentAuthor;
+    private String[] authors;
     private final JabRefFrame jabRefFrame;
     private final DialogService dialogService;
 
-    public GoogleScholarSearcher(BibEntry entry, DialogService dialogService, JabRefFrame jabRefFrame, StateManager stateManager) throws IOException {
+    public GoogleScholarSearcher(BibEntry entry, JabRefFrame jabRefFrame, DialogService dialogService, StateManager stateManager) {
         this.jabRefFrame = jabRefFrame;
         this.dialogService = dialogService;
         BooleanExpression fieldIsSet = isFieldSetForSelectedEntry(StandardField.AUTHOR, stateManager);
         Optional<String> author = entry.getField(StandardField.AUTHOR);
-        if(author.isPresent()) this.authorName = author.get();
+        if(author.isPresent()) this.authors = author.get().split(";");
+        this.currentAuthor = 0;
         this.executable.bind(needsEntriesSelected(1, stateManager).and(fieldIsSet));
     }
 
     private String getUrl() throws IOException {
-        String[] name = authorName.split(" ");
+        String[] name = authors[currentAuthor].split(" ");
 
         Document doc;
         String searchURL = GOOGLE_SCHOLAR_ADDR + "scholar?hl=en&as_sdt=0%2C5&q=";
@@ -62,7 +64,7 @@ public class GoogleScholarSearcher extends SimpleCommand {
         Elements authorsName = doc.getElementsByClass("gs_rt2");
 
         for (int i = 0; i < authorsName.size(); i++){
-            if(authorsName.get(i).text().equalsIgnoreCase(authorName)){
+            if(authorsName.get(i).text().equalsIgnoreCase(authors[currentAuthor])){
                 return GOOGLE_SCHOLAR_ADDR + authorsName.get(i).getElementsByTag("a").get(0).attr("href");
             }
         }
@@ -106,28 +108,53 @@ public class GoogleScholarSearcher extends SimpleCommand {
         Iterator<Element> it = journalsClasses.iterator();
 
         while(it.hasNext() && journals.size() < 10){
-            String journal = journalsClasses.get(firstJournal).text().split(", ")[0];
-            journals.add(journal);
-            firstJournal += 2;
+            try{
+                String journal = journalsClasses.get(firstJournal).text().split(", ")[0];
+                journals.add(journal);
+                firstJournal += 2;
+            }catch (IndexOutOfBoundsException e){
+                break;
+            }
         }
 
         return journals;
     }
 
-    private List<BibEntry> getEntries(){
-        List<BibEntry> entries = new ArrayList<>(10);
+    private List<BibEntry> getEntries(List<BibEntry> entries, int limit){
         List<String> titles = getTitles();
         List<String> years = getYears();
         List<String> journals = getJournal();
-
-        for(int i = 0; i < titles.size(); i++){
-            BibEntry entry = new BibEntry();
-            entry.setType(StandardEntryType.Article);
-            entry.setField(StandardField.AUTHOR, authorName);
-            entry.setField(StandardField.TITLE, titles.get(i));
-            entry.setField(StandardField.YEAR, years.get(i));
-            entry.setField(StandardField.JOURNAL, journals.get(i));
-            entries.add(entry);
+        int pos = 0;
+        for(int i = 0; i < limit; i++){
+            try {
+                BibEntry entry = new BibEntry();
+                entry.setType(StandardEntryType.Article);
+                entry.setField(StandardField.AUTHOR, authors[currentAuthor]);
+                entry.setField(StandardField.TITLE, titles.get(pos));
+                entry.setField(StandardField.YEAR, years.get(pos));
+                entry.setField(StandardField.JOURNAL, journals.get(pos));
+                ++pos;
+                entries.add(entry);
+            }catch(IndexOutOfBoundsException e){
+                try{
+                    ++currentAuthor;
+                    if(currentAuthor < authors.length){
+                        this.url = getUrl();
+                        this.doc = Jsoup.connect(this.url).userAgent(USER_AGENT).referrer(REFERRER).get();
+                        getEntries(entries, limit-i);
+                    }else
+                        dialogService.showWarningDialogAndWait(Localization.lang("Warning"),
+                                Localization.lang("Only " + i + " entries were found."));
+                        break;
+                }catch(IOException e2){
+                    e2.printStackTrace();
+                    break;
+                }catch(IllegalArgumentException e3){
+                    dialogService.showWarningDialogAndWait(Localization.lang("Warning"),
+                            Localization.lang(e3.getMessage()+". Author " + authors[currentAuthor] + " not found."));
+                    break;
+                }
+            }
         }
 
         return entries;
@@ -139,12 +166,13 @@ public class GoogleScholarSearcher extends SimpleCommand {
             url = getUrl();
             System.out.println(url);
             doc = Jsoup.connect(url).userAgent(USER_AGENT).referrer(REFERRER).get();
-            jabRefFrame.getCurrentLibraryTab().insertEntries(getEntries());
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch(IllegalArgumentException e) {
+            List<BibEntry> entries = new ArrayList<>(10);
+            jabRefFrame.getCurrentLibraryTab().insertEntries(getEntries(entries, 10));
+        } catch (IOException e1) {
+            e1.printStackTrace();
+        } catch(IllegalArgumentException e2) {
             dialogService.showWarningDialogAndWait(Localization.lang("Warning"),
-                    Localization.lang(e.getMessage()+". Author not found."));
+                    Localization.lang(e2.getMessage()+". Author " + authors[currentAuthor] + " not found."));
         }
     }
 }
