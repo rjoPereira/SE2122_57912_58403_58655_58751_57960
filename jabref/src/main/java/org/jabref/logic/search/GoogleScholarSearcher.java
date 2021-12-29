@@ -35,7 +35,7 @@ public class GoogleScholarSearcher extends SimpleCommand {
     private final JabRefFrame jabRefFrame;
     private final DialogService dialogService;
 
-    public GoogleScholarSearcher(BibEntry entry, JabRefFrame jabRefFrame, DialogService dialogService, StateManager stateManager) {
+    public GoogleScholarSearcher(BibEntry entry, DialogService dialogService, JabRefFrame jabRefFrame, StateManager stateManager) {
         this.jabRefFrame = jabRefFrame;
         this.dialogService = dialogService;
         BooleanExpression fieldIsSet = isFieldSetForSelectedEntry(StandardField.AUTHOR, stateManager);
