@@ -35,9 +35,5 @@ public class CSVImporterTest {
     public void testGetDescription() {
         assertEquals("Wraps the CSV function to be used as an Importer.", importer.getDescription());
     }
-
-    @Test
-    public void testFile(){
-
-    }
+    
 }

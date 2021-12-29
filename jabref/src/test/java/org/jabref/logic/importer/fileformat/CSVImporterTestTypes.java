@@ -20,10 +20,13 @@ import java.util.*;
 public class CSVImporterTestTypes {
     @Test
     public void importConvertsToCorrectBibType() throws IOException {
-       Path p = Paths.get("C:", "Users", "Rita", "RC", "jabref", "example.csv");
+
+       Path p = Paths.get("").toAbsolutePath();
+       Path finalP = Paths.get(p.toString(), "src", "test", "java", "org", "jabref", "logic", "importer", "fileformat", "example.csv");
+       System.out.println("class path currently : " + finalP.toString());
        CSVImporter csvImp = new CSVImporter();
 
-       List<BibEntry> bibEntries = csvImp.importDatabase(p, Charset.defaultCharset())
+       List<BibEntry> bibEntries = csvImp.importDatabase(finalP, Charset.defaultCharset())
                 .getDatabase().getEntries();
 
         BibEntry entry = new BibEntry();
