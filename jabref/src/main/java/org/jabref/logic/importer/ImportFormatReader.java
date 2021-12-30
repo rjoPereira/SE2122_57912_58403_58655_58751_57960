@@ -52,9 +52,8 @@ public class ImportFormatReader {
         formats.add(new PdfVerbatimBibTextImporter(importFormatPreferences));
         formats.add(new PdfContentImporter(importFormatPreferences));
         formats.add(new PdfEmbeddedBibFileImporter(importFormatPreferences));
-        //
-        formats.add(new CSVImporter());
-        //
+        formats.add(new CSVImporter());//added line for new feature
+
         if (importerPreferences.isGrobidEnabled()) {
             formats.add(new PdfGrobidImporter(importerPreferences, importFormatPreferences));
         }
