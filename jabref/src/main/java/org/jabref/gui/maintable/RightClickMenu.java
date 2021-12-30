@@ -79,7 +79,7 @@ public class RightClickMenu {
         contextMenu.getItems().add(factory.createMenuItem(StandardActions.OPEN_URL, new OpenUrlAction(dialogService, stateManager, preferencesService)));
         contextMenu.getItems().add(factory.createMenuItem(StandardActions.SEARCH_SHORTSCIENCE, new SearchShortScienceAction(dialogService, stateManager, preferencesService)));
         //
-        contextMenu.getItems().add(factory.createMenuItem(StandardActions.SEARCH_GOOGLESCHOLAR, new GoogleScholarSearcher(entry.getEntry().getField(StandardField.AUTHOR).get())));
+        contextMenu.getItems().add(factory.createMenuItem(StandardActions.SEARCH_GOOGLESCHOLAR, new GoogleScholarSearcher(entry.getEntry(), dialogService, libraryTab.frame(), stateManager)));
 
         contextMenu.getItems().add(new SeparatorMenuItem());
 
