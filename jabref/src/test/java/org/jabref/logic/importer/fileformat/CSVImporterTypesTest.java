@@ -2,24 +2,19 @@ package org.jabref.logic.importer.fileformat;
 
 import org.jabref.model.entry.BibEntry;
 import org.jabref.model.entry.field.StandardField;
-import org.jabref.model.entry.types.EntryType;
 import org.jabref.model.entry.types.StandardEntryType;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.MethodSource;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.StringReader;
 import java.nio.charset.Charset;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.*;
 
-public class CSVImporterTestTypes {
+class CSVImporterTypesTest {
     @Test
-    public void importConvertsToCorrectBibType() throws IOException {
+    void importConvertsToCorrectBibType() throws IOException {
 
        Path p = Paths.get("").toAbsolutePath();
        Path finalP = Paths.get(p.toString(), "src", "test", "java", "org", "jabref", "logic", "importer", "fileformat", "example.csv");
