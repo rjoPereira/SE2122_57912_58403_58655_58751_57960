@@ -2,6 +2,8 @@ package org.jabref.logic.importer.fileformat;
 
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVRecord;
+import org.jabref.logic.JabRefException;
+import org.jabref.logic.importer.ImportException;
 import org.jabref.logic.importer.Importer;
 import org.jabref.logic.importer.ParserResult;
 import org.jabref.logic.l10n.Localization;
@@ -16,7 +18,7 @@ import java.nio.charset.Charset;
 import java.nio.file.Path;
 import java.util.*;
 
-public class CSVImporter extends Importer{
+public class CSVImporter extends Importer {
     @Override
     public String getName() {
         return "CSV";
@@ -47,9 +49,9 @@ public class CSVImporter extends Importer{
         ArrayList<BibEntry> csvEntries = new ArrayList<>(100);
         Reader csv;
 
-        try{
+        try {
             csv = new FileReader(filePath.toString());
-        } catch(FileNotFoundException e){
+        } catch (FileNotFoundException e) {
             return csvEntries;
         }
 
@@ -57,21 +59,23 @@ public class CSVImporter extends Importer{
 
         try {
             records = CSVFormat.DEFAULT.parse(csv);
-        }catch(IOException e){
+        } catch (IOException e) {
             return csvEntries;
         }
 
         BibEntry entry;
 
-        for(CSVRecord record : records){
-            entry = new BibEntry();
-            entry.setType(StandardEntryType.valueOf(record.get(0)));
-            entry.setField(StandardField.AUTHOR, record.get(1));
-            entry.setField(StandardField.TITLE, record.get(2));
-            entry.setField(StandardField.YEAR, record.get(3));
-            entry.setField(StandardField.JOURNAL, record.get(4));
+        for (CSVRecord record : records) {
+            if (record.size() == 5) {
+                entry = new BibEntry();
+                entry.setType(StandardEntryType.valueOf(record.get(0)));
+                entry.setField(StandardField.AUTHOR, record.get(1));
+                entry.setField(StandardField.TITLE, record.get(2));
+                entry.setField(StandardField.YEAR, record.get(3));
+                entry.setField(StandardField.JOURNAL, record.get(4));
 
-            csvEntries.add(entry);
+                csvEntries.add(entry);
+            }
         }
 
         Collections.sort(csvEntries, new Comparator<BibEntry>() {
@@ -84,9 +88,18 @@ public class CSVImporter extends Importer{
     }
 
     @Override
-    public ParserResult importDatabase(Path filePath, Charset defaultEncoding) {
+    public ParserResult importDatabase(Path filePath, Charset defaultEncoding) throws IOException {
         Objects.requireNonNull(filePath);
-        return new ParserResult(readCSV(filePath));
+        try {
+            ArrayList<BibEntry> entries = readCSV(filePath);
+            if (entries.size() == 0) {
+                throw new IOException();
+            } else {
+                return new ParserResult(entries);
+            }
+        } catch (IOException e) {
+            throw new IOException(Localization.lang("Could not find any entries in the correct format. Please make sure your entries are in the following format: Type,Author,Title,Year,Journal"));
+        }
     }
 
     @Override
@@ -100,34 +113,13 @@ public class CSVImporter extends Importer{
      * contains at least one BibEntry.
      */
     @Override
-    public boolean isRecognizedFormat(Path filePath, Charset defaultEncoding) throws IOException{
-        String fileExtension = filePath.toString().split(".")[1];
+    public boolean isRecognizedFormat(Path filePath, Charset defaultEncoding) throws IOException {
+        String fileExtension = filePath.toString().split("\\.")[1];
 
-        if(!fileExtension.equals("csv"))
+        if (fileExtension.equals("csv"))
+            return true;
+        else
             return false;
-
-        Reader csv;
-
-        try{
-            csv = new FileReader(filePath.toString());
-        } catch(FileNotFoundException e){
-            return false;
-        }
-
-        Iterable<CSVRecord> records;
-
-        try {
-            records = CSVFormat.DEFAULT.parse(csv);
-        }catch(IOException e){
-            return false;
-        }
-
-        for(CSVRecord record: records){
-            if(record.size() != 5)
-                return false;
-        }
-
-        return true;
     }
 
     @Override
