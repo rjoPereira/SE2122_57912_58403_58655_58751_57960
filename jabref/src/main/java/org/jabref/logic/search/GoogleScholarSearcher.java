@@ -194,10 +194,11 @@ public class GoogleScholarSearcher extends SimpleCommand {
     @Override
     public void execute() {
         try {
-            this.url = getUrl();
-            while(url == null && currentAuthor < authors.length) {
-                currentAuthor++;
+            while(currentAuthor < authors.length){
                 this.url = getUrl();
+                if (url!=null) {
+                    break;
+                } else currentAuthor++;
             }
             doc = Jsoup.connect(url).userAgent(USER_AGENT).referrer(REFERRER).get();
             List<BibEntry> entries = new ArrayList<>(10);
