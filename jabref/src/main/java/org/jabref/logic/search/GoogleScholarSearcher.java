@@ -38,6 +38,7 @@ public class GoogleScholarSearcher extends SimpleCommand {
     private String[] authors;
     private final JabRefFrame jabRefFrame;
     private final DialogService dialogService;
+    private static final int MAX_REFERENCES = 10;
 
     public GoogleScholarSearcher(BibEntry entry, DialogService dialogService, JabRefFrame jabRefFrame, StateManager stateManager) {
         this.jabRefFrame = jabRefFrame;
@@ -89,12 +90,12 @@ public class GoogleScholarSearcher extends SimpleCommand {
      * @return List<String> titles
      */
     private List<String> getTitles(){
-        List<String> titles = new ArrayList<>(10);
+        List<String> titles = new ArrayList<>(MAX_REFERENCES);
 
         Elements titlesElems = doc.getElementsByClass("gsc_a_at");
         Iterator<Element> it = titlesElems.iterator();
 
-        while(it.hasNext() && titles.size() < 10){
+        while(it.hasNext() && titles.size() < MAX_REFERENCES){
             Element titleElem = it.next();
             titles.add(titleElem.text());
         }
@@ -108,12 +109,12 @@ public class GoogleScholarSearcher extends SimpleCommand {
      * @return List<String> publication years
      */
     private List<String> getYears(){
-        List<String> years = new ArrayList<>(10);
+        List<String> years = new ArrayList<>(MAX_REFERENCES);
 
         Elements yearsClasses = doc.select(".gsc_a_y .gsc_a_h.gsc_a_hc.gs_ibl");
         Iterator<Element> it = yearsClasses.iterator();
 
-        while(it.hasNext() && years.size() < 10){
+        while(it.hasNext() && years.size() < MAX_REFERENCES){
             Element year = it.next();
             years.add(year.text());
         }
@@ -127,13 +128,13 @@ public class GoogleScholarSearcher extends SimpleCommand {
      * @return List<String> journal titles
      */
     private List<String> getJournal(){
-        List<String> journals = new ArrayList<>(10);
+        List<String> journals = new ArrayList<>(MAX_REFERENCES);
 
         Elements journalsClasses = doc.select(".gsc_a_t div.gs_gray");
         int firstJournal = 1;
         Iterator<Element> it = journalsClasses.iterator();
 
-        while(it.hasNext() && journals.size() < 10){
+        while(it.hasNext() && journals.size() < MAX_REFERENCES){
             try{
                 String journal = journalsClasses.get(firstJournal).text().split(", ")[0];
                 journals.add(journal);
@@ -201,8 +202,8 @@ public class GoogleScholarSearcher extends SimpleCommand {
                 } else currentAuthor++;
             }
             doc = Jsoup.connect(url).userAgent(USER_AGENT).referrer(REFERRER).get();
-            List<BibEntry> entries = new ArrayList<>(10);
-            jabRefFrame.getCurrentLibraryTab().insertEntries(getEntries(entries, 10));
+            List<BibEntry> entries = new ArrayList<>(MAX_REFERENCES);
+            jabRefFrame.getCurrentLibraryTab().insertEntries(getEntries(entries, MAX_REFERENCES));
         } catch (IOException e1) {
             e1.printStackTrace();
         } catch(IllegalArgumentException e2) {
