@@ -1,0 +1,175 @@
+Merged Deliverable Document of Review Logbook Phase 2
+
+On top of the individual reviews that were logged in github, the S Team often reviewed documents and ideas during Daily Scrum and Sprint Retro meetings.
+There were also reviews made by the professor during our classes that we took into consideration for our final deliverable document of the project.
+The result of all these reviews can be seen in Mergeddoc_deliverable_phase2.
+
+In this document, we present the collection of logged reviews.
+
+   Sprint 5
+    -------------------------------
+    Clara Sousa 58403
+        
+    - Metrics Reviewlog:
+    Reviewing Paula's Dependency Metrics
+
+    I found your evaluation to be as thorough as necessary; explaining the Dependency parameters really helped to understand the graphs.
+    It was also brilliant of you to calculate modes and average values and use them as a means to prove your point! 
+    It really made everything easier.
+    I hadn't realised how much should be improved only by looking at the dependency issues!
+    It would have been great if you could have added some more code smells that would support your thesis, especially because we actually saw a couple
+    of them when going through the code.
+    Overall, your analysis seems very well elaborated. Congrats!
+    
+    
+    -------------------------------
+    Paula Lopes 58655
+    
+    - Metrics Reviewlog:
+    Reviewing Complexity Metrics - Done by Clara Sousa
+    Didn't expect to know this project complexity was acceptable( taking into consideration its' size).
+    The explanation is very detailed and easy to understand. Very good.
+    Reviewed by Paula Lopes [ Element 2]
+    
+    
+    --------------------------------
+    Pedro Reis 58751
+    
+    - Metrics Reviewlog:
+    Martin Packaging Metrics review by Pedro Reis 58751
+    The definitions of afferent couplings, efferent couplings, abstractness, distance from main sequence are very well explained but the analysis provided has some errors. 
+    For example, in the afferent couplings (Ca) the average is actually 312.89 and not 0 since you said the most classes are independent and that is false, most of them are dependent but they are still inside of the ideal range that goes from 0 to 500. 
+    In the efferent couplings most of the classes depend on outside classes and the average is actually 317.67, this value is really high and is outside the ideal range of 0 to 20. 
+    This indicates instability of a package, and any change of the numerous external classes can cause the need for changes in the package which means problems with care and development of code. 
+    In the abstractness there are some ortographic mistakes that are easily fixed, but it should be better explained. 
+    The abstractness is related to the instability, so if packages are stable with instability close to 0, abstractness should be close to 1, and the other way around for packages that are unstable, so for instability close to 1, abstractness should be close to 0. 
+    In the data collected by our metrics, our instability average is 0,5 which would mean our abstractness would be close to 0,5 but it is instead very close to 0 since it has an average of 0,06 meaning that our instability should be higher, close to 1 or the abstractness should be higher but this wouldn't be good because the abstractness should be close to 0 or 1. 
+    For the instability, our average is 0,5 and this is outside the ideal range of 0 to 0,3 or 0,7 to 1 because packages should be either very stable or unstable and we should avoid packages of intermediate stability like ours.
+    Regarding the distance from main sequence, our average is 0,32 which is decent but it could be lower in order to balance the difference between our abstractness and our instability. 
+    Like I already said, for our value of abstractness our instability should be higher because it is the parameter which is outside the ideal range. 
+    In conclusion, the easiest way to fix our packages would be to increase the instability by increasing even further our Ce (outgoing dependencies) value. 
+    This way our instability would be close to 1 and our abstractness would be close to 0 so the diff would be also close to 0. This means our packages would be easy to change.
+    
+    
+    ------------------------------------
+    Ricardo Pereira 57912
+    Lines of code by Pedro Reis
+    Great explanation of what the LOC metrics and its parameters are, well detailed
+    analysis and well made conclusion.
+    
+    
+    ------------------------------------
+    Rita Silva 57960
+    MOOD metrics by Ricardo
+    I agree with the conclusion, but there should be an explanation for the results present in the Excel file and the code smells found in the source code.
+    
+    ------------------------------------
+
+
+
+  Sprint 6
+  -----------------------------------------
+    Clara Sousa 58403
+	- User Stories Reviewlog:
+	     	Reviwing team B's user stories - Finding more bibliographic references from an author
+             	Not only does this functionality seem really interesting and useful, it was also really very well detailed in the user stories.
+ 	     	I agree with how you saw this new situation in terms of use cases.
+ 	     	Good job, guys!
+ ------------------------------------------
+   Paula Lopes 58655
+	- User Stories Reviewlog:
+	      	Reviwing team B's user stories - Finding more bibliographic references from an author
+ 	      	Done by Pedro Reis [Element 3] , Ricardo Pereira [Element 4]
+              	Well detailed explanation of the user story. Always a needed functionality, it's great you brought it up.
+              	Good job Team B.
+              	Reviewed by Paula Lopes [Element 2]
+ -------------------------------------------
+   Pedro Reis 58751
+	- User Stories Reviewlog:
+	      	Review of team A user stories - Importing Bibliographic References from a CSV file
+		This functionality makes a lot of sense to implement because the jabref application already had a functionality to export bibliographic references to a CSV file, so this new 		import functionality complements it. Regarding the explanation of user stories, it was really well done so good job.
+
+ -------------------------------------------
+   Ricardo Pereira 57912
+	- User Stories Reviewlog:
+		Rita Silva, Clara Sousa, Paula Lopes - Really well made, I agree with you.
+
+ -------------------------------------------
+   Rita Silva 57960
+	- User Stories Reviewlog:
+		Ricardo and Pedro- I agree. 
+
+ -------------------------------------------
+
+
+
+  Sprint 7
+ -----------------------------------------
+    Clara Sousa 58403
+	- Reviewlog:
+	Given the nature of the tasks assigned for this sprint, the Scrum Team ended up working together in all sessions, often ignoring the sub team planning.
+	As a result, the team thought there was no need to present review logs in the current sprint.
+
+ ------------------------------------------
+   Paula Lopes 58655
+	- Reviewlog:
+	Given the nature of the tasks assigned for this sprint, the Scrum Team ended up working together in all sessions, often ignoring the sub team planning.
+	As a result, the team thought there was no need to present review logs in the current sprint.
+
+ -------------------------------------------
+   Pedro Reis 58751
+	- Reviewlog:
+	Given the nature of the tasks assigned for this sprint, the Scrum Team ended up working together in all sessions, often ignoring the sub team planning.
+	As a result, the team thought there was no need to present review logs in the current sprint.
+
+ -------------------------------------------
+   Ricardo Pereira 57912
+	- Reviewlog:
+	Given the nature of the tasks assigned for this sprint, the Scrum Team ended up working together in all sessions, often ignoring the sub team planning.
+	As a result, the team thought there was no need to present review logs in the current sprint.
+
+ -------------------------------------------
+   Rita Silva 57960
+	- Reviewlog:
+	Given the nature of the tasks assigned for this sprint, the Scrum Team ended up working together in all sessions, often ignoring the sub team planning.
+	As a result, the team thought there was no need to present review logs in the current sprint.
+
+ -------------------------------------------
+
+
+
+  Sprint 8 
+ -----------------------------------------
+    Clara Sousa 58403
+	- Reviewlog:
+	Given the nature of the tasks assigned for this sprint, the Scrum Team ended up working together in all sessions, often ignoring the sub team planning.
+	As a result, the team thought there was no need to present review logs in the current sprint.
+
+ ------------------------------------------
+   Paula Lopes 58655
+	- Reviewlog:
+	Given the nature of the tasks assigned for this sprint, the Scrum Team ended up working together in all sessions, often ignoring the sub team planning.
+	As a result, the team thought there was no need to present review logs in the current sprint.
+
+ -------------------------------------------
+   Pedro Reis 58751
+	- Reviewlog:
+	Given the nature of the tasks assigned for this sprint, the Scrum Team ended up working together in all sessions, often ignoring the sub team planning.
+	As a result, the team thought there was no need to present review logs in the current sprint.
+
+ -------------------------------------------
+   Ricardo Pereira 57912
+	- Reviewlog:
+	Given the nature of the tasks assigned for this sprint, the Scrum Team ended up working together in all sessions, often ignoring the sub team planning.
+	As a result, the team thought there was no need to present review logs in the current sprint.
+
+ -------------------------------------------
+   Rita Silva 57960
+	- Reviewlog:
+	Given the nature of the tasks assigned for this sprint, the Scrum Team ended up working together in all sessions, often ignoring the sub team planning.
+	As a result, the team thought there was no need to present review logs in the current sprint.
+
+ -------------------------------------------
+  
+
+    
